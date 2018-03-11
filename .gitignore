@@ -2,7 +2,6 @@
 !*.yaml
 !.gitignore
 !README.md
-automations.yaml
 customize.yaml
 entity_registry.yaml
 floorplan.yaml

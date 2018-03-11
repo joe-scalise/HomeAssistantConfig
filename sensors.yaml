@@ -1,0 +1,60 @@
+  - platform: time_date
+    display_options:
+      - time
+
+  - platform: moon
+
+  - platform: template
+    sensors:
+      hline_1:
+        value_template: hline
+
+# not working        
+#  - platform: fedex
+#    username: !secret fedex_username
+#    password: !secret fedex_password
+
+  - platform: google_travel_time
+    name: Joe's Home Travel Time
+    api_key: !secret google_travel_time_api_key
+    origin: device_tracker.joe
+    destination: zone.home
+  
+  - platform: google_travel_time
+    name: Joe's Morning Commute
+    api_key: !secret google_travel_time_api_key
+    origin: zone.home
+    destination: zone.work
+    
+  - platform: ups
+    username: !secret ups_username
+    password: !secret ups_password
+
+  - platform: uptime
+    name: Home Assistant Uptime
+  
+  - platform: cert_expiry
+    host: !secret host
+    
+  - platform: fastdotcom
+  
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    update_interval: 
+      minutes: 3
+    forecast:
+    monitored_conditions:
+      - summary
+      - temperature
+      - hourly_summary
+  
+  - platform: template
+    sensors:
+      android_battery_sensor:
+        value_template: '{{ states.device_tracker.joe.attributes.battery }}'
+        unit_of_measurement: '%'
+        
+  - platform: template
+    sensors:
+      android_activity_sensor:
+        value_template: '{{ states.device_tracker.joe.attributes.activity }}'

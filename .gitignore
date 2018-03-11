@@ -1,0 +1,11 @@
+*
+!*.yaml
+!.gitignore
+!README.md
+automations.yaml
+customize.yaml
+entity_registry.yaml
+floorplan.yaml
+secrets.yaml
+known_devices.yaml
+ip_bans.yaml

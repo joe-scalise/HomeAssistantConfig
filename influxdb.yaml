@@ -1,0 +1,16 @@
+  host: !secret host_ip
+  include:
+    entities:
+      - sensor.living_room_temperature
+      - !secret bedroom3_temperature
+      - sensor.master_bedroom_temperature
+      - sensor.my_ecobee_temperature
+      - sensor.playroom_temperature
+      - !secret bedroom2_temperature
+      - sensor.my_ecobee_humidity
+      - binary_sensor.living_room_occupancy
+      - !secret bedroom3_occupancy
+      - binary_sensor.master_bedroom_occupancy
+      - binary_sensor.my_ecobee_occupancy
+      - binary_sensor.playroom_occupancy
+      - !secret bedroom2_occupancy

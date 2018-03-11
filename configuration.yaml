@@ -1,0 +1,81 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: imperial
+  temperature_unit: F
+  time_zone: America/New_York
+  customize: !include customize.yaml
+
+http:
+  api_password: !secret http_password
+  base_url: !secret base_url
+  ssl_certificate: ssl/cert.pem
+  ssl_key: ssl/privkey.pem
+  ip_ban_enabled: True
+  login_attempts_threshold: 1
+
+config:
+hassio:
+frontend:
+  extra_html_url:
+    - /local/custom_ui/state-card-hline.html
+  javascript_version: latest
+history:
+logbook:
+logger:
+  default: error
+map:
+sun:
+updater:
+  reporting: False
+
+# not working
+#calendar:
+#  - platform: caldav
+#    url: !secret caldav_url
+#    username: !secret caldav_username
+#    password: !secret caldav_password
+
+ecobee:
+  api_key: !secret ecobee_api_key
+  
+panel_custom:
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
+  
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key
+    allowed_chat_ids:
+      - !secret telegram_chat_id
+
+# not setup yet
+#media_player:
+#  - platform: firetv
+  
+# not working
+#usps:
+#    username: !secret usps_username
+#    password: !secret usps_password
+
+zwave:
+  usb_path: /dev/ttyACM0
+
+# Includes
+automation: !include automations.yaml
+camera: !include cameras.yaml
+device_tracker: !include device_trackers.yaml
+group: !include groups.yaml
+influxdb: !include influxdb.yaml
+notify: !include notify.yaml
+panel_iframe: !include panels.yaml
+recorder: !include recorder.yaml
+script: !include scripts.yaml
+shell_command: !include shell_commands.yaml
+sensor: !include sensors.yaml
+zone: !include zones.yaml

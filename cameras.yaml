@@ -1,0 +1,9 @@
+  - platform: synology
+    url: !secret synology_host
+    username: !secret synology_username
+    password: !secret synology_password
+    verify_ssl: True
+    
+  - platform: generic
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.joe.attributes.latitude }},{{ states.device_tracker.joe.attributes.longitude }}&zoom=16&size=640x400&maptype=roadmap&markers=color:blue%7Clabel:J%7C{{ states.device_tracker.joe.attributes.latitude }},{{ states.device_tracker.joe.attributes.longitude }}
+    limit_refetch_to_url_change: true

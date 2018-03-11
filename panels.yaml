@@ -1,0 +1,16 @@
+  pihole:
+    title: Pi-hole
+    icon: mdi:block-helper
+    url: !secret pihole_url
+  ide:
+    title: IDE
+    icon: mdi:wrench
+    url: !secret ide_url
+  nodered:
+    title: Node-RED
+    icon: mdi:nut
+    url: !secret nodered_url
+  mdi:
+    title: Material Design Icons
+    icon: mdi:web
+    url: https://materialdesignicons.com/cheatsheet

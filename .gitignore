@@ -3,6 +3,7 @@
 !.gitignore
 !README.md
 !cameras
+!device_trackers
 customize.yaml
 entity_registry.yaml
 floorplan.yaml

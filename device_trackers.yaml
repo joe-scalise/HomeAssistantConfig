@@ -1,6 +1,2 @@
-  - platform: gpslogger
-    password: !secret gpslogger_password
+
     
-  - platform: nmap_tracker
-    hosts:
-      - !secret nmap_host_1

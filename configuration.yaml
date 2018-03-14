@@ -16,22 +16,47 @@ http:
   ip_ban_enabled: True
   login_attempts_threshold: 1
 
+
+camera: !include_dir_list cameras
+
 config:
-hassio:
+
+device_tracker: !include_dir_list device_trackers
+
+ecobee:
+  api_key: !secret ecobee_api_key
+
 frontend:
   extra_html_url:
     - /local/custom_ui/state-card-hline.html
   javascript_version: latest
+
+hassio:
+
 history:
+
 logbook:
+
 logger:
   default: error
+  
 map:
+
+media_player:
+  - platform: plex
+
 sun:
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key
+    allowed_chat_ids:
+      - !secret telegram_chat_id
+
 updater:
   reporting: False
   
-camera: !include_dir_list cameras
+
 
 # not working
 #calendar:
@@ -39,9 +64,6 @@ camera: !include_dir_list cameras
 #    url: !secret caldav_url
 #    username: !secret caldav_username
 #    password: !secret caldav_password
-
-ecobee:
-  api_key: !secret ecobee_api_key
   
 panel_custom:
   - name: floorplan
@@ -49,15 +71,6 @@ panel_custom:
     sidebar_icon: mdi:home
     url_path: floorplan
     config: !include floorplan.yaml
-
-media_player:
-  - platform: plex
-  
-telegram_bot:
-  - platform: polling
-    api_key: !secret telegram_api_key
-    allowed_chat_ids:
-      - !secret telegram_chat_id
 
 # not setup yet
 #media_player:
@@ -73,7 +86,6 @@ zwave:
 
 # Includes
 automation: !include automations.yaml
-device_tracker: !include device_trackers.yaml
 group: !include groups.yaml
 influxdb: !include influxdb.yaml
 notify: !include notify.yaml

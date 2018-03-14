@@ -2,6 +2,7 @@
 !*.yaml
 !.gitignore
 !README.md
+!cameras
 customize.yaml
 entity_registry.yaml
 floorplan.yaml

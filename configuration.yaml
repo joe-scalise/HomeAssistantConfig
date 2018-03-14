@@ -30,6 +30,8 @@ map:
 sun:
 updater:
   reporting: False
+  
+camera: !include_dir_list cameras
 
 # not working
 #calendar:
@@ -47,6 +49,9 @@ panel_custom:
     sidebar_icon: mdi:home
     url_path: floorplan
     config: !include floorplan.yaml
+
+media_player:
+  - platform: plex
   
 telegram_bot:
   - platform: polling
@@ -68,7 +73,6 @@ zwave:
 
 # Includes
 automation: !include automations.yaml
-camera: !include cameras.yaml
 device_tracker: !include device_trackers.yaml
 group: !include groups.yaml
 influxdb: !include influxdb.yaml

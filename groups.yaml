@@ -123,6 +123,7 @@
       - zwave.dining_room_wall_switch
       - zwave.living_room_wall_switch
       - zwave.playroom_wall_switch
+      - media_player.plex_web_chrome
       
   indoorlighting:
     name: Indoor Lighting

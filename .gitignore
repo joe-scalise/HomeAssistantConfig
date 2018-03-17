@@ -4,6 +4,7 @@
 !README.md
 !cameras
 !device_trackers
+!sensors
 customize.yaml
 entity_registry.yaml
 floorplan.yaml

@@ -15,6 +15,7 @@
       - group.bedroom3
       - group.phones
       - group.deliveries
+      - calendar.joescaliseus
 
   family:
     name: ' '

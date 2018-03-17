@@ -16,6 +16,7 @@ http:
   ip_ban_enabled: True
   login_attempts_threshold: 1
 
+automation: !include automations.yaml
 
 camera: !include_dir_list cameras
 
@@ -26,6 +27,8 @@ device_tracker: !include_dir_list device_trackers
 ecobee:
   api_key: !secret ecobee_api_key
 
+group: !include groups.yaml
+
 frontend:
   extra_html_url:
     - /local/custom_ui/state-card-hline.html
@@ -34,6 +37,8 @@ frontend:
 hassio:
 
 history:
+
+influxdb: !include influxdb.yaml
 
 logbook:
 
@@ -44,6 +49,25 @@ map:
 
 media_player:
   - platform: plex
+  
+notify: !include notify.yaml
+
+panel_custom:
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
+
+panel_iframe: !include panels.yaml
+
+recorder: !include recorder.yaml
+
+script: !include scripts.yaml
+
+sensor: !include sensors.yaml
+
+shell_command: !include shell_commands.yaml
 
 sun:
 
@@ -55,22 +79,18 @@ telegram_bot:
 
 updater:
   reporting: False
+
+zone: !include zones.yaml
+
+zwave:
+  usb_path: /dev/ttyACM0
   
-
-
 # not working
-#calendar:
-#  - platform: caldav
-#    url: !secret caldav_url
-#    username: !secret caldav_username
-#    password: !secret caldav_password
-  
-panel_custom:
-  - name: floorplan
-    sidebar_title: Floorplan
-    sidebar_icon: mdi:home
-    url_path: floorplan
-    config: !include floorplan.yaml
+calendar:
+  - platform: caldav
+    url: !secret caldav_url
+    username: !secret caldav_username
+    password: !secret caldav_password
 
 # not setup yet
 #media_player:
@@ -80,18 +100,3 @@ panel_custom:
 #usps:
 #    username: !secret usps_username
 #    password: !secret usps_password
-
-zwave:
-  usb_path: /dev/ttyACM0
-
-# Includes
-automation: !include automations.yaml
-group: !include groups.yaml
-influxdb: !include influxdb.yaml
-notify: !include notify.yaml
-panel_iframe: !include panels.yaml
-recorder: !include recorder.yaml
-script: !include scripts.yaml
-shell_command: !include shell_commands.yaml
-sensor: !include sensors.yaml
-zone: !include zones.yaml

@@ -1,0 +1,7 @@
+platform: google_travel_time
+name: Joe's Home Travel Time
+api_key: !secret google_travel_time_api_key
+origin: device_tracker.joe
+destination: zone.home
+options:
+  mode: driving

@@ -1,0 +1,4 @@
+platform: template
+sensors:
+  android_activity_sensor:
+    value_template: '{{ states.device_tracker.joe.attributes.activity }}'

@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  android_battery_sensor:
+    value_template: '{{ states.device_tracker.joe.attributes.battery }}'
+    unit_of_measurement: '%'

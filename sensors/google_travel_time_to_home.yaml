@@ -1,0 +1,7 @@
+platform: google_travel_time
+name: Joe's Morning Commute
+api_key: !secret google_travel_time_api_key
+origin: zone.home
+destination: zone.work
+options:
+  mode: driving

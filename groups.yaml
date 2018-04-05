@@ -29,6 +29,7 @@
     view: no
     entities:
        - climate.my_ecobee
+       - binary_sensor.my_ecobee_occupancy
 
   drivetimes:
     name: Drive Times
@@ -125,6 +126,7 @@
       - zwave.living_room_wall_switch
       - zwave.playroom_wall_switch
       - media_player.plex_web_chrome
+      - group.other
       
   indoorlighting:
     name: Indoor Lighting
@@ -146,3 +148,10 @@
     view: no
     entities:
       - sensor.home_assistant_uptime
+      
+  other:
+    name: Other
+    view: no
+    entities:
+      - sensor.discogs
+      - !secret breaches

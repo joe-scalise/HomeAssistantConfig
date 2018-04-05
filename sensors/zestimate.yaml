@@ -1,0 +1,5 @@
+# broken
+##platform: zestimate
+#api_key: !secret zestimate_api_key
+#zpid:
+#  - !secret zpid

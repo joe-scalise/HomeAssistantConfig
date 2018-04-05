@@ -20,6 +20,15 @@ automation: !include automations.yaml
 
 camera: !include_dir_list cameras
 
+calendar:
+  - platform: caldav
+    url: !secret caldav_url
+    username: !secret caldav_username
+    password: !secret caldav_password
+    calendars:
+      - !secret calendar
+      - us_federal_holidays
+
 config:
 
 device_tracker: !include_dir_list device_trackers
@@ -30,9 +39,6 @@ ecobee:
 group: !include groups.yaml
 
 frontend:
-  extra_html_url:
-    - /local/custom_ui/state-card-hline.html
-  javascript_version: latest
 
 hassio:
 
@@ -65,7 +71,7 @@ recorder: !include recorder.yaml
 
 script: !include scripts.yaml
 
-sensor: !include sensors.yaml
+sensor: !include_dir_list sensors
 
 shell_command: !include shell_commands.yaml
 
@@ -77,6 +83,11 @@ telegram_bot:
     allowed_chat_ids:
       - !secret telegram_chat_id
 
+# broken
+#usps:
+#  username: !secret usps_username
+#  password: !secret usps_password
+
 updater:
   reporting: False
 
@@ -84,19 +95,3 @@ zone: !include zones.yaml
 
 zwave:
   usb_path: /dev/ttyACM0
-  
-# not working
-calendar:
-  - platform: caldav
-    url: !secret caldav_url
-    username: !secret caldav_username
-    password: !secret caldav_password
-
-# not setup yet
-#media_player:
-#  - platform: firetv
-  
-# not working
-#usps:
-#    username: !secret usps_username
-#    password: !secret usps_password

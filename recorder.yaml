@@ -10,7 +10,6 @@
       - script
     entities:
       - sensor.time
-      - sensor.hline_1
       - zwave.aeotec_zw090_zstick_gen5_us
       - zwave.dining_room_wall_switch
       - zwave.living_room_wall_switch
@@ -27,3 +26,7 @@
       - sensor.android_activity_sensor
       - sensor.ups
       - weather.my_ecobee
+      - sun.sun
+      - camera.1
+      - camera.generic_camera
+      - persistent_notification.invalid_config

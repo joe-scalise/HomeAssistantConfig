@@ -15,6 +15,8 @@ http:
   ssl_key: ssl/privkey.pem
   ip_ban_enabled: True
   login_attempts_threshold: 1
+  trusted_networks:
+    - !secret trusted_networks
 
 automation: !include automations.yaml
 
@@ -53,8 +55,9 @@ logger:
   
 map:
 
-media_player:
-  - platform: plex
+# broken
+#media_player:
+#  - platform: plex
   
 notify: !include notify.yaml
 

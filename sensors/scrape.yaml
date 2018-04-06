@@ -1,0 +1,4 @@
+platform: scrape
+resource: https://www.goruck.com/gr2/
+name: GR2
+select: 'span[class="price-value"]'

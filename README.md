@@ -6,6 +6,7 @@ Home Assistant is open source software for home automation.  This repo serves as
 
 #### System:
 - Raspberry Pi 3 running HASS.IO
+- Waveshare Official Raspberry Pi Power Supply
 - Aeotec ZW090 Z-Stick Gen5 US
 - SanDisk Ultra 64GB MicroSDXC Class 10 UHS Memory Card
 

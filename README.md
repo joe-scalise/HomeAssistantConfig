@@ -19,4 +19,4 @@ Home Assistant is open source software for home automation.  This repo serves as
 - Haiku Home Fans
 - ecobee3 Wi-Fi Thermostat
 - ecobee Room Sensors
-- Dahua IP Security Cams
+- Dahua IPC-HFW4300S V2 IP Security Cams

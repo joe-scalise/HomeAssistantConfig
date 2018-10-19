@@ -36,3 +36,4 @@ Home Assistant is open source software for home automation.  This repo serves as
 ### To-Do
 * https://automatic.com/pro/
 * https://opengarage.io/
+* https://eightsleep.com/

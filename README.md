@@ -4,11 +4,26 @@
 
 This is a backup of my Home Assistant configuration.  I recently moved it all from a Raspberry Pi to Docker.  I have not had any stability issues since - I was constantly chasing some issue or another on the Raspberry Pi/HASS.IO which led me down this path.
 
-I use Docker Compose, and Traefik as a reverse proxy.  Traefik takes care of getting a wildcard SSL too.
+I use Docker Compose, and Traefik as a reverse proxy.  
+
+### Highlights of the System Setup
+
+* Traefik takes care of getting a wildcard SSL
+* UniFi Security Gateway takes care of updating DNS dynamically
+* Canonical Livepatch takes care of updating the server, mostly without reboots
+* Docker Compose `restart: always` takes care of restarting containers
+* [Watchtower](https://github.com/v2tec/watchtower) takes care of updating running container's images
+* [healthchecks.io](https://healthchecks.io/) takes care of service pings and emails me when something is down
+* Github takes care of configuration backup (not automatically)
+* Travis CI provides automatic builds/test for repository changes
 
 ### Containers:
 
 * [homeassistant/home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) - Home Assistant
+* []() - Traefik
+* []() - Portainer
+* []() - Syncthing
+* [v2tec/watchtower](https://github.com/v2tec/watchtower) - Watchtower
 
 Home Assistant is open source software for home automation.  This repo serves as a backup of my configuration.
 

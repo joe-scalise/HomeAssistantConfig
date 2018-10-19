@@ -1,0 +1,12 @@
+language: python
+cache: pip
+python:
+  - "3.5"
+before_install:
+  - mv travis_secrets.yaml secrets.yaml
+  - touch "ssl.crt"
+  - touch "ssl.key"
+install:
+  - pip3 install homeassistant
+script:
+  - hass -c . --script check_config

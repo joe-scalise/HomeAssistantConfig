@@ -12,7 +12,7 @@ I use Docker Compose, and Traefik as a reverse proxy.  Traefik takes care of get
 
 Home Assistant is open source software for home automation.  This repo serves as a backup of my configuration.
 
-#### System:
+### System:
 - old HP laptop
 - Aeotec ZW090 Z-Stick Gen5 US
 - Ubiquiti UniFi networking gear
@@ -21,7 +21,7 @@ Home Assistant is open source software for home automation.  This repo serves as
 - ~~Waveshare Official Raspberry Pi Power Supply~~
 - ~~SanDisk Ultra 64GB MicroSDXC Class 10 UHS Memory Card~~
 
-#### Devices:
+### Devices:
 
 | Qty   | Name                                                  | Link |
 | ----- | ----------------------------------------------------- | ---- |
@@ -32,3 +32,7 @@ Home Assistant is open source software for home automation.  This repo serves as
 | 1 | ecobee3 Wi-Fi Thermostat  | |
 | 6 | ecobee Room Sensors (temperature, motion) | |
 | 2 | Dahua IPC-HFW4300S V2 IP Security Cameras | |
+
+### To-Do
+* https://automatic.com/pro/
+* https://opengarage.io/

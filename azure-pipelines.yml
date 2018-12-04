@@ -6,6 +6,12 @@ steps:
     inputs:
       versionSpec: '3.6'
       architecture: 'x64'
+      
+  - script: mv travis_secrets.yaml secrets.yaml
+  
+  - script: touch "ssl.cert"
+  
+  - script: touch "ssl.key"
 
   - script: python -m pip install --upgrade pip
     

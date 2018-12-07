@@ -1,5 +1,5 @@
   test_telegram:
-    alias: Test Telgram Notifications
+    alias: Test Telegram Notifications
     sequence:
       - service: notify.telegram
         data:

@@ -1,0 +1,258 @@
+title: !secret home_title
+
+views:
+  - icon: mdi:home-assistant
+    title: Home
+    id: home
+    cards:
+      - type: entities
+        entities:
+          - device_tracker.joe
+          - sensor.android_activity_sensor
+          #- device_tracker.64bc0c45ea9b
+
+      - type: map
+        aspect_ratio: 60%
+        entities:
+          - device_tracker.joe
+          - zone.home
+          - zone.work
+
+      - type: weather-forecast
+        entity: weather.my_ecobee
+
+      - type: entities
+        entities:
+          - entity: climate.my_ecobee
+            name: Thermostat
+          - entity: sensor.my_ecobee_temperature
+            name: Temperature
+          - entity: sensor.my_ecobee_humidity
+            name: Humidity
+      
+      - type: thermostat
+        entity: climate.my_ecobee
+
+      - type: history-graph
+        title: Indoor Temperature History
+        entities:
+          - entity: sensor.master_bedroom_temperature
+            name: Master Bedroom
+          - entity: sensor.playroom_temperature
+            name: Playroom
+          - entity: sensor.living_room_temperature
+            name: Living Room
+          - entity: !secret bedroom2_temperature
+            name: !secret bedroom2_name
+          - entity: !secret bedroom3_temperature
+            name: !secret bedroom3_name
+          - entity: sensor.my_ecobee_temperature
+            name: ecobee
+
+      - type: entities
+        title: Living Room
+        show_header_toggle: false
+        entities:
+          - entity: switch.ge_12722_onoff_relay_switch_4
+          - entity: sensor.living_room_temperature
+            name: Temperature
+          - entity: binary_sensor.living_room_occupancy
+            name: Motion
+
+      - type: entities
+        title: Dining Room
+        show_header_toggle: false
+        entities:
+          - entity: switch.ge_12722_onoff_relay_switch_3
+      
+      - type: entities
+        title: Playroom
+        show_header_toggle: false
+        entities:
+          - entity: switch.ge_12722_onoff_relay_switch_5
+          - entity: sensor.playroom_temperature
+            name: Temperature
+          - entity: binary_sensor.playroom_occupancy
+            name: Motion
+
+      - type: entities
+        title: Master Bedroom
+        show_header_toggle: false
+        entities:
+          - entity: sensor.master_bedroom_temperature
+            name: Temperature
+          - entity: binary_sensor.master_bedroom_occupancy
+            name: Motion
+
+      - type: entities
+        title: !secret bedroom2_name
+        show_header_toggle: false
+        entities:
+          - entity: switch.ge_14291_onoff_relay_switch_2
+          - entity: !secret bedroom2_temperature
+            name: Temperature
+          - entity: !secret bedroom2_occupancy
+            name: Motion
+
+      - type: entities
+        title: !secret bedroom3_name
+        show_header_toggle: true
+        entities:
+          - entity: !secret bedroom3_temperature
+            name: Temperature
+          - entity: !secret bedroom3_occupancy
+            name: Motion
+
+      - type: picture-entity
+        entity: group.all_switches
+        image: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+
+      - type: entities
+        title: Drive Times
+        entities:
+          - sensor.joes_home_travel_time
+          - sensor.joes_morning_commute
+     
+  # - title: History
+  #   id: history   
+  #   cards:
+  #     - type: history-graph
+  #       title: Drive Times History
+  #       entities:
+  #         - sensor.joes_home_travel_time
+  #         - sensor.joes_morning_commute
+
+  #     - type: history-graph
+  #       title: Presence History
+  #       entities:
+  #         - device_tracker.joe
+  #         - device_tracker.64bc0c45ea9b
+          
+  - title: Security
+    id: security
+    cards:
+      - type: entities
+        title: Sun
+        entities:
+          - sun.sun
+          - sensor.moon
+
+      - type: entities
+        title: Automations
+        entities:
+          - automation.turn_off_first_floor_lights_at_1015_pm
+          - automation.turn_on_indoor_lighting_45m_before_sunset
+          - automation.a_is_away_from_home_telegram_notification
+          - automation.a_is_home_telegram_notification
+          - automation.breaches_notification
+          - automation.hassio_heartbeat_to_healthchecksio
+          
+      - type: picture-entity
+        name: Back Patio
+        entity: camera.onvif_camera
+
+  - title: System
+    id: system
+    cards:
+      - type: entities
+        title: Home Assistant
+        entities:
+          - sensor.home_assistant_uptime
+
+      - type: entities
+        title: Home Network
+        entities:
+          - sensor.ssl_certificate_expiry
+          - sensor.fastcom_download
+
+      - type: entities
+        title: !secret domain_name
+        #title: Whois
+        entities:
+          - sensor.whois
+
+      - type: history-graph
+        title: Download Speed History
+        entities:
+          - sensor.fastcom_download
+
+      # - type: entities
+      #   title: Indoor Lighting
+      #   entities:
+      #     - 
+
+      - type: entities
+        title: Automations
+        entities: 
+          - group.all_automations
+
+      - type: entities
+        title: Scripts
+        entities: 
+          - group.all_scripts
+
+      - type: entities
+        title: Tests
+        entities:
+          - script.test_telegram
+
+      - type: entities
+        title: Switches
+        entities: 
+          - group.all_switches
+    
+      - type: entities
+        title: Z-Wave
+        entities:
+          - zwave.aeotec_zw090_zstick_gen5_us
+          - zwave.ge_14291_onoff_relay_switch_2
+          - zwave.ge_12722_onoff_relay_switch_3
+          - zwave.ge_12722_onoff_relay_switch_4
+          - zwave.ge_12722_onoff_relay_switch_5
+
+  - title: Dashboard
+    id: dashboard
+    cards:
+      - type: entities
+        title: Security Breaches
+        entities:
+          - email_entity
+          - email2_entity
+          - email3_entity
+          - email4_entity
+          - email5_entity
+
+      - type: history-graph
+        title: Pi-hole
+        entities:
+          - sensor.pihole_ads_blocked_today
+          - sensor.pihole_ads_percentage_blocked_today
+          - sensor.pihole_dns_queries_cached
+          - sensor.pihole_dns_queries_forwarded
+          - sensor.pihole_dns_queries_today
+          - sensor.pihole_dns_unique_clients
+          - sensor.pihole_dns_unique_domains
+          - sensor.pihole_domains_blocked
+          - sensor.pihole_seen_clients
+
+      - type: history-graph
+        title: Zestimate History
+        entities:
+          - sensor.zestimate
+
+      - type: entities
+        title: Crypto
+        entities:
+          - sensor.coinbase_btc_wallet
+          - sensor.coinbase_eth_wallet
+          - sensor.coinbase_usd_wallet
+
+      - type: history-graph
+        title: Bitcoin
+        entities:
+          - sensor.btc_exchange_rate
+
+      - type: entities
+        title: Discogs
+        entities:
+          - sensor.discogs

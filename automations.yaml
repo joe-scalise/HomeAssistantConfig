@@ -26,7 +26,7 @@
   - data:
       message: Abby just arrived home.
     service: notify.telegram
-  alias: Abby is Home Telegram Notification
+  alias: A is Home Telegram Notification
   condition: []
   id: '1519742558541'
   initial_state: false
@@ -39,7 +39,7 @@
   - data:
       message: Abby is away from home.
     service: notify.telegram
-  alias: Abby is Away from Home Telegram Notification
+  alias: A is Away from Home Telegram Notification
   condition: []
   id: '1519742626294'
   initial_state: false

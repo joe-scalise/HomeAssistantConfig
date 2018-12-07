@@ -11,66 +11,61 @@ homeassistant:
 http:
   api_password: !secret http_password
   base_url: !secret base_url
-  ssl_certificate: ssl/cert.pem
-  ssl_key: ssl/privkey.pem
   ip_ban_enabled: True
-  login_attempts_threshold: 1
+  login_attempts_threshold: 5
+#  use_x_forwarded_for: True
   trusted_networks:
-    - !secret trusted_networks
+    - !secret trusted_network_1
 
 automation: !include automations.yaml
 
 camera: !include_dir_list cameras
 
-calendar:
-  - platform: caldav
-    url: !secret caldav_url
-    username: !secret caldav_username
-    password: !secret caldav_password
-    calendars:
-      - !secret calendar
-      - us_federal_holidays
+coinbase:
+  api_key: !secret coinbase_api_key
+  api_secret: !secret coinbase_secret 
+  exchange_rate_currencies:
+    - BTC
+    - ETH
 
 config:
 
 device_tracker: !include_dir_list device_trackers
 
+discovery:
+
 ecobee:
   api_key: !secret ecobee_api_key
 
-group: !include groups.yaml
-
 frontend:
 
-hassio:
+group: !include groups.yaml
 
 history:
 
-influxdb: !include influxdb.yaml
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_cloud_platform_api_key
+  #expose_by_default: false
 
 logbook:
 
 logger:
   default: error
-  
+
+media_player:
+  - platform: plex
+
 map:
 
-# broken
-#media_player:
-#  - platform: plex
-  
 notify: !include notify.yaml
 
-panel_custom:
-  - name: floorplan
-    sidebar_title: Floorplan
-    sidebar_icon: mdi:home
-    url_path: floorplan
-    config: !include floorplan.yaml
-
-panel_iframe: !include panels.yaml
-
-recorder: !include recorder.yaml
+recorder:
+  purge_keep_days: 5
+  include:
+    domains:
+      - sensor
+      - switch
 
 script: !include scripts.yaml
 
@@ -86,7 +81,6 @@ telegram_bot:
     allowed_chat_ids:
       - !secret telegram_chat_id
 
-# broken
 #usps:
 #  username: !secret usps_username
 #  password: !secret usps_password

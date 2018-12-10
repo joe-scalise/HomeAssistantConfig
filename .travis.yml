@@ -3,7 +3,7 @@ cache: pip
 python:
   - "3.5"
 before_install:
-  - mv travis_secrets.yaml secrets.yaml
+  - mv pipeline_secrets.yaml secrets.yaml
   - touch "ssl.crt"
   - touch "ssl.key"
 install:

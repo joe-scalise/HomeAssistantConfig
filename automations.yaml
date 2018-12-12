@@ -1,27 +1,19 @@
-- action:
-  - data:
-      entity_id: group.all_switches
-    service: homeassistant.turn_on
-  alias: Turn On Indoor Lighting 45m Before Sunset
-  condition:
-  - condition: state
-    entity_id: group.family
-    state: home
-  id: '1519742168246'
+- id: '1519742310300'
+  alias: Ensure First Floor Lights are Off at 11:15 PM
   trigger:
-  - event: sunset
-    offset: -00:45:00
-    platform: sun
-- action:
-  - data:
-      entity_id: group.indoorlighting
-    service: homeassistant.turn_off
-  alias: Turn Off Indoor Lights at 10:15 PM
-  condition: []
-  id: '1519742310300'
-  trigger:
-  - at: '22:15:00'
+  - at: '23:15'
     platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.ge_12722_onoff_relay_switch_4
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.ge_12722_onoff_relay_switch_3
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.ge_12722_onoff_relay_switch_5
+    service: homeassistant.turn_off
 - action:
   - data:
       message: Abby just arrived home.
@@ -49,7 +41,7 @@
     platform: state
     to: not_home
 - action:
-  - service: shell_command.heartbeat
+  - service: shell_command.healthcheck
   alias: HASS.IO Heartbeat to healthchecks.io
   condition: []
   id: '1519742778289'
@@ -57,3 +49,23 @@
   - minutes: /15
     seconds: 0
     platform: time
+- id: '1544582567121'
+  alias: Turn Off Christmas Lights
+  trigger:
+  - at: '23:59'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.ge_14284_outdoor_smart_switch_switch
+    service: homeassistant.turn_off
+- id: '1544583017280'
+  alias: Turn On Christmas Lights
+  trigger:
+  - at: '18:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.ge_14284_outdoor_smart_switch_switch
+    service: homeassistant.turn_on

@@ -1,6 +1,6 @@
 platform: google_travel_time
 name: Joe's Morning Commute
-api_key: !secret google_travel_time_api_key
+api_key: !secret google_cloud_platform_api_key
 origin: zone.home
 destination: zone.work
 options:

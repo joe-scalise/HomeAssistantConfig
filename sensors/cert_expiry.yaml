@@ -1,2 +1,2 @@
 platform: cert_expiry
-host: !secret host
+host: !secret cert_expiry_host

@@ -1,2 +1,0 @@
-platform: nmap_tracker
-hosts: !secret nmap_host_1

@@ -31,9 +31,9 @@ Home Assistant is open source software for home automation.  This repo serves as
 
 ### System:
 - old HP laptop
-- Aeotec ZW090 Z-Stick Gen5 US
-- Ubiquiti UniFi networking gear
-- Synology NAS
+- Ubuntu 18.04.1 LTS
+
+Old System:
 - ~~Raspberry Pi 3 running HASS.IO~~
 - ~~Waveshare Official Raspberry Pi Power Supply~~
 - ~~SanDisk Ultra 64GB MicroSDXC Class 10 UHS Memory Card~~
@@ -42,13 +42,19 @@ Home Assistant is open source software for home automation.  This repo serves as
 
 | Qty   | Name                                                  | Link |
 | ----- | ----------------------------------------------------- | ---- |
-| 6 | GE Z-Wave Wireless Switches (12722, 12723, 14291, 14294) | [(Amazon)](https://www.amazon.com/gp/product/B01M1AHC3R/) |
-| 3 | Amazon Fire TV (3rd Gen) w/ Ethernet Adapters  | |
-| 2 | Haiku Home Lights | |
-| 2 | Haiku Home Fans | |
-| 1 | ecobee3 Wi-Fi Thermostat  | |
-| 6 | ecobee Room Sensors (temperature, motion) | |
-| 2 | Dahua IPC-HFW4300S V2 IP Security Cameras | |
+| 6 | GE Z-Wave Wireless Switches (12722, 12723, 14291, 14294) | [(Amazon)](https://amzn.to/2C6WGNI) |
+| 1 | GE Z-Wave Plus Smart Lighting & Appliance Control Outdoor Module | [(Amazon)](https://amzn.to/2QNSkDs) |
+| 1 | Aeotec Z-Stick Gen5 Z-Wave Plus USB | [(Amazon)]https://amzn.to/2UD2vd7) |
+| 1 | Ubiquiti Unifi Security Gateway (USG) | [(Amazon)](https://amzn.to/2ry1HJp) |
+| 1 | Ubiquiti UniFi Switch 8 60W (US-8-60W) | [(Amazon)](https://amzn.to/2C8KNqL) |
+| 2 | Ubiquiti Networks Unifi 802.11ac Dual-Radio PRO Access Point (UAP-AC-PRO-US)| [(Amazon)](https://amzn.to/2C70HBQ) |
+1 | Ubiquiti Unifi Cloud Key - Remote Control Device (UC-CK)| [(Amazon)](https://amzn.to/2SJkIUu) |
+| 3 | Amazon Fire TV w/ Ethernet Adapters  | [(Amazon)](https://amzn.to/2QR7yaM) [(Amazon)](https://amzn.to/2PzMeSm) |
+| 2 | Haiku Home Lights | [(Haiku Home)](https://www.haikuhome.com/) |
+| 2 | Haiku Home L Series 52" Smart Ceiling Fan w/ Wi-Fi | [(Amazon)](https://amzn.to/2EstSSb) |
+| 1 | ecobee3 Wi-Fi Thermostat  | [(Amazon)](https://amzn.to/2EerzBv) |
+| 6 | ecobee Room Sensors (temperature, motion) | [(Amazon)](https://amzn.to/2Ei1eCI) |
+| 2 | Dahua IPC-HFW4300S V2 IP Security Cameras | [(Amazon)](https://amzn.to/2UELI9J) |
 
 ### To-Do
 * https://automatic.com/pro/

@@ -1,8 +1,6 @@
 # Home Assistant Configuration
 
-![Build Status](https://travis-ci.org/joe-scalise/HomeAssistantConfig.svg?branch=master)
-
-[![Build Status](https://dev.azure.com/joescalise/HomeAssistant/_apis/build/status/joe-scalise.HomeAssistantConfig?branchName=local-changes)](https://dev.azure.com/joescalise/HomeAssistant/_build/latest?definitionId=1?branchName=local-changes)
+![Build Status](https://travis-ci.org/joe-scalise/HomeAssistantConfig.svg?branch=master) [![Build Status](https://dev.azure.com/joescalise/HomeAssistant/_apis/build/status/joe-scalise.HomeAssistantConfig?branchName=local-changes)](https://dev.azure.com/joescalise/HomeAssistant/_build/latest?definitionId=1?branchName=local-changes)
 
 This is a backup of my Home Assistant configuration.  I recently moved it all from a Raspberry Pi to Docker.  I have not had any stability issues since - I was constantly chasing some issue or another on the Raspberry Pi/HASS.IO which led me down this path.
 

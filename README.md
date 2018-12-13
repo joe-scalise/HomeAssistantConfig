@@ -50,7 +50,8 @@ Old System:
 | 2 | Ubiquiti Networks Unifi 802.11ac Dual-Radio PRO Access Point (UAP-AC-PRO-US)| [(Amazon)](https://amzn.to/2C70HBQ) |
 | 1 | Ubiquiti Unifi Cloud Key - Remote Control Device (UC-CK)| [(Amazon)](https://amzn.to/2SJkIUu) |
 | 1 | Synology 2 bay NAS DiskStation DS218j | [(Amazon)](https://amzn.to/2UDEiDG) |
-| 3 | Amazon Fire TV w/ Ethernet Adapters  | [(Amazon)](https://amzn.to/2QR7yaM) [(Amazon)](https://amzn.to/2PzMeSm) |
+| 3 | Amazon Fire TV w/ Ethernet Adapters  | [(Amazon)](https://amzn.to/2QR7yaM) |
+| 3 | Ethernet Adapter for Amazon Fire TV Devices | [(Amazon)](https://amzn.to/2PzMeSm) |
 | 2 | Haiku Home Lights | [(Haiku Home)](https://www.haikuhome.com/) |
 | 2 | Haiku Home L Series 52" Smart Ceiling Fan w/ Wi-Fi | [(Amazon)](https://amzn.to/2EstSSb) |
 | 1 | ecobee3 Wi-Fi Thermostat  | [(Amazon)](https://amzn.to/2EerzBv) |

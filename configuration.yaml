@@ -39,7 +39,7 @@ ecobee:
 
 frontend:
 
-#group: !include includes/groups.yaml
+group: !include includes/groups.yaml
 
 history:
 

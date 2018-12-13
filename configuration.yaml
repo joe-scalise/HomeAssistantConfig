@@ -6,7 +6,7 @@ homeassistant:
   unit_system: imperial
   temperature_unit: F
   time_zone: America/New_York
-  customize: !include customize.yaml
+  customize: !include includes/customize.yaml
 
 http:
   api_password: !secret http_password
@@ -17,7 +17,7 @@ http:
   trusted_networks:
     - !secret trusted_network_1
 
-automation: !include automations.yaml
+automation: !include_dir_list automations
 
 camera: !include_dir_list cameras
 
@@ -39,7 +39,7 @@ ecobee:
 
 frontend:
 
-group: !include includes/groups.yaml
+#group: !include includes/groups.yaml
 
 history:
 

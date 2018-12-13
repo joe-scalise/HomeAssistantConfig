@@ -4,7 +4,8 @@
 !*.README.md
 !cameras
 !device_trackers
-!senseors
+!sensors
+!includes
 automations.yaml
 customize.yaml
 entity_registry.yaml

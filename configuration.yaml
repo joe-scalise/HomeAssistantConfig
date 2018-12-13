@@ -39,7 +39,7 @@ ecobee:
 
 frontend:
 
-group: !include groups.yaml
+group: !include includes/groups.yaml
 
 history:
 
@@ -58,7 +58,7 @@ media_player:
 
 map:
 
-notify: !include notify.yaml
+notify: !include includes/notify.yaml
 
 recorder:
   purge_keep_days: 5
@@ -67,11 +67,11 @@ recorder:
       - sensor
       - switch
 
-script: !include scripts.yaml
+script: !include includes/scripts.yaml
 
 sensor: !include_dir_list sensors
 
-shell_command: !include shell_commands.yaml
+shell_command: !include includes/shell_commands.yaml
 
 sun:
 
@@ -88,7 +88,7 @@ telegram_bot:
 updater:
   reporting: False
 
-zone: !include zones.yaml
+zone: !include includes/zones.yaml
 
 zwave:
   usb_path: /dev/ttyACM0

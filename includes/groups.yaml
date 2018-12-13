@@ -1,8 +1,8 @@
-  default_view:
-    name: Home
-    view: yes
-    entities:
-      - sensor.moon
+  # default_view:
+  #   name: Home
+  #   view: yes
+  #   entities:
+  #     - sensor.moon
   #     - group.drivetimes
   #     - camera.generic_camera
   #     - group.climatecontrol

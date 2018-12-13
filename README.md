@@ -22,12 +22,10 @@ I use Docker Compose, and Traefik as a reverse proxy.
 ### Containers:
 
 * [homeassistant/home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) - Home Assistant
-* []() - Traefik
-* []() - Portainer
-* []() - Syncthing
+* [traefik](https://hub.docker.com/r/_/traefik/) - Traefik
+* [portainer/portainer](https://hub.docker.com/r/portainer/portainer/) - Portainer
+* [linuxserver/syncthing](https://hub.docker.com/r/linuxserver/syncthing/) - Syncthing
 * [v2tec/watchtower](https://github.com/v2tec/watchtower) - Watchtower
-
-Home Assistant is open source software for home automation.  This repo serves as a backup of my configuration.
 
 ### System:
 - old HP laptop
@@ -57,8 +55,8 @@ Old System:
 | 1 | ecobee3 Wi-Fi Thermostat  | [(Amazon)](https://amzn.to/2EerzBv) |
 | 6 | ecobee Room Sensors (temperature, motion) | [(Amazon)](https://amzn.to/2Ei1eCI) |
 | 2 | Dahua IPC-HFW4300S V2 IP Security Cameras | [(Amazon)](https://amzn.to/2UELI9J) |
-| 1 | Ubiquiti UniFi Video G3 Flex Indoor/Outdoor PoE Camera (UVC-G3-FLEX) | [(Amazon)](https://amzn.to/2LfgYaK)] |
-| 5 | Ubiquiti UniFi Video Camera G3 (UVC-G3-AF) | [(Amazon)](https://amzn.to/2SIgvjZ)] |
+| 1 | Ubiquiti UniFi Video G3 Flex Indoor/Outdoor PoE Camera (UVC-G3-FLEX) | [(Amazon)](https://amzn.to/2LfgYaK) |
+| 5 | Ubiquiti UniFi Video Camera G3 (UVC-G3-AF) | [(Amazon)](https://amzn.to/2SIgvjZ) |
 
 ### To-Do
 * https://automatic.com/pro/

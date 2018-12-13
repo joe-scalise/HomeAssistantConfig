@@ -7,7 +7,7 @@
 !sensors
 !includes
 !automations
-automations.yaml
+presence.yaml
 entity_registry.yaml
 floorplan.yaml
 secrets.yaml

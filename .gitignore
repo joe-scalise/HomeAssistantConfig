@@ -6,8 +6,8 @@
 !device_trackers
 !sensors
 !includes
+!automations
 automations.yaml
-customize.yaml
 entity_registry.yaml
 floorplan.yaml
 secrets.yaml

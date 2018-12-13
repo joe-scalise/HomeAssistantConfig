@@ -7,7 +7,7 @@ steps:
       versionSpec: '3.6'
       architecture: 'x64'
       
-  - script: mv travis_secrets.yaml secrets.yaml
+  - script: mv pipeline_secrets.yaml secrets.yaml
   
   - script: touch "ssl.cert"
   

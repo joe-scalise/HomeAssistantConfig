@@ -47,7 +47,7 @@ Old System:
 | 1 | Aeotec Z-Stick Gen5 Z-Wave Plus USB | [(Amazon)](https://amzn.to/2UD2vd7) |
 | 1 | Ubiquiti Unifi Security Gateway (USG) | [(Amazon)](https://amzn.to/2ry1HJp) |
 | 1 | Ubiquiti UniFi Switch 8 60W (US-8-60W) | [(Amazon)](https://amzn.to/2C8KNqL) |
-| 2 | Ubiquiti Networks Unifi 802.11ac Dual-Radio PRO Access Point (UAP-AC-PRO-US)| [(Amazon)](https://amzn.to/2C70HBQ) |
+| 2 | Ubiquiti Unifi 802.11ac Dual-Radio PRO Access Point (UAP-AC-PRO-US)| [(Amazon)](https://amzn.to/2C70HBQ) |
 | 1 | Ubiquiti Unifi Cloud Key - Remote Control Device (UC-CK)| [(Amazon)](https://amzn.to/2SJkIUu) |
 | 1 | Synology 2 bay NAS DiskStation DS218j | [(Amazon)](https://amzn.to/2UDEiDG) |
 | 3 | Amazon Fire TV w/ Ethernet Adapters  | [(Amazon)](https://amzn.to/2QR7yaM) |
@@ -57,8 +57,8 @@ Old System:
 | 1 | ecobee3 Wi-Fi Thermostat  | [(Amazon)](https://amzn.to/2EerzBv) |
 | 6 | ecobee Room Sensors (temperature, motion) | [(Amazon)](https://amzn.to/2Ei1eCI) |
 | 2 | Dahua IPC-HFW4300S V2 IP Security Cameras | [(Amazon)](https://amzn.to/2UELI9J) |
-| | G3 Flex Indoor/Outdoor PoE Camera | |
-| |
+| 1 | Ubiquiti UniFi Video G3 Flex Indoor/Outdoor PoE Camera (UVC-G3-FLEX) | [(Amazon)](https://amzn.to/2LfgYaK)] |
+| 5 | Ubiquiti UniFi Video Camera G3 (UVC-G3-AF) | [(Amazon)](https://amzn.to/2SIgvjZ)] |
 
 ### To-Do
 * https://automatic.com/pro/

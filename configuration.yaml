@@ -53,6 +53,9 @@ logbook:
 logger:
   default: error
 
+lovelace:
+  mode: yaml
+
 media_player:
   - platform: plex
 

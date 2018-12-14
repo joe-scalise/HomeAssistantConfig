@@ -8,6 +8,7 @@ views:
 
       - type: entities
         title: Joe's Phone
+        show_header_toggle: false
         entities:
           - entity: device_tracker.joe
             name: Joe
@@ -18,17 +19,20 @@ views:
           #- device_tracker.64bc0c45ea9b
 
       - type: map
-        aspect_ratio: 60%
+        #aspect_ratio: 60%
         entities:
           - device_tracker.joe
           - zone.home
           - zone.work
+          - zone.rec_center
+          - zone.school
 
       - type: weather-forecast
         entity: weather.my_ecobee
 
       - type: entities
         title: Thermostat
+        show_header_toggle: false
         entities:
           - entity: climate.my_ecobee
             name: Thermostat
@@ -105,7 +109,7 @@ views:
 
       - type: entities
         title: !secret bedroom3_name
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: !secret bedroom3_temperature
             name: Temperature
@@ -125,6 +129,7 @@ views:
 
       - type: entities
         title: Drive Times
+        show_header_toggle: false
         entities:
           - sensor.joes_home_travel_time
           - sensor.joes_morning_commute
@@ -233,11 +238,11 @@ views:
       - type: entities
         title: Security Breaches
         entities:
-          - email_entity
-          - email2_entity
-          - email3_entity
-          - email4_entity
-          - email5_entity
+          - !secret email_entity
+          - !secret email2_entity
+          - !secret email3_entity
+          - !secret email4_entity
+          - !secret email5_entity
 
       - type: history-graph
         title: Pi-hole

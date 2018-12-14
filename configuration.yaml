@@ -59,6 +59,16 @@ lovelace:
 media_player:
   - platform: plex
 
+  - platform: firetv
+    name: Master Bedroom Fire TV
+    host: 10.0.0.16
+    adbkey: "/config/adbkey"
+
+  # - platform: firetv
+  #    name: Living Room Fire TV
+  #    host: 10.0.0.13
+  #    adbkey: "/adbkey13"
+
 map:
 
 notify: !include includes/notify.yaml
@@ -78,6 +88,8 @@ script: !include includes/scripts.yaml
 sensor: !include_dir_list sensors
 
 shell_command: !include includes/shell_commands.yaml
+
+shopping_list:
 
 sun:
 

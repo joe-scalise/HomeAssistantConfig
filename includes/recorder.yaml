@@ -11,24 +11,5 @@
       - script
     entities:
       - sensor.time
-      - zwave.aeotec_zw090_zstick_gen5_us
-      - zwave.dining_room_wall_switch
-      - zwave.living_room_wall_switch
-      - zwave.playroom_wall_switch
-      - sensor.moon
-      - sensor.dark_sky_hourly_summary
-      - sensor.dark_sky_summary
-      - sensor.dark_sky_temperature
-      - sensor.joes_home_travel_time
-      - sensor.joes_morning_commute
-      - sensor.home_assistant_uptime
-      - sensor.ssl_certificate_expiry
-      - sensor.android_battery_sensor
-      - sensor.android_activity_sensor
-      - sensor.ups
-      - weather.my_ecobee
       - sun.sun
-      - camera.1
-      - camera.generic_camera
-      - persistent_notification.invalid_config
-      - sensor.discogs
+      - sensor.moon

@@ -2,3 +2,11 @@
     latitude: !secret zone_work_latitude
     longitude: !secret zone_work_longitude
     radius: 300
+  - name: Rec Center
+    latitude: !secret rec_center_latitude
+    longitude: !secret rec_center_longitude
+    radius: 150
+  - name: School
+    latitude: !secret school_latitude
+    longitude: !secret school_longitude
+    radius: 150

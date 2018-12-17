@@ -13,6 +13,8 @@ steps:
   
   - script: touch "ssl.key"
 
+  - script: touch "adbkey"
+
   - script: python -m pip install --upgrade pip
     
   - script: |

@@ -11,11 +11,8 @@ homeassistant:
 http:
   api_password: !secret http_password
   base_url: !secret base_url
-  ip_ban_enabled: True
+  ip_ban_enabled: true
   login_attempts_threshold: 5
-#  use_x_forwarded_for: True
-  trusted_networks:
-    - !secret trusted_network_1
 
 automation: !include_dir_merge_list automations
 
@@ -60,12 +57,12 @@ media_player:
   - platform: plex
 
   - platform: firetv
-    name: Master Bedroom Fire TV
+    name: Living Room Fire TV
     host: 10.0.0.16
     adbkey: "/config/adbkey"
 
   # - platform: firetv
-  #    name: Living Room Fire TV
+  #    name: Master Bedroom Fire TV
   #    host: 10.0.0.13
   #    adbkey: "/adbkey13"
 

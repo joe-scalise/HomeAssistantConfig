@@ -13,7 +13,7 @@ steps:
   
   - script: touch "ssl.key"
 
-  - script: mkdir "config
+  - script: mkdir "config"
   
   - script: touch "config/adbkey"
 

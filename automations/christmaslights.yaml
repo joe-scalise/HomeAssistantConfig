@@ -11,7 +11,7 @@
 - id: '1544583017280'
   alias: Turn On Christmas Lights
   trigger:
-  - at: '18:00'
+  - at: '17:00'
     platform: time
   condition: []
   action:

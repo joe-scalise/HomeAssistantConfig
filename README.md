@@ -18,12 +18,10 @@ This is a backup of my Home Assistant configuration.  Started on Raspberry Pi wi
 ### Containers (related to Home Assistant):
 
 * [homeassistant/home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) - Home Assistant
-* [traefik](https://hub.docker.com/r/_/traefik/) - Traefik
-* [portainer/portainer](https://hub.docker.com/r/portainer/portainer/) - Portainer
-* [linuxserver/syncthing](https://hub.docker.com/r/linuxserver/syncthing/) - Syncthing
-* [v2tec/watchtower](https://github.com/v2tec/watchtower) - Watchtower
-
-* *TODO* node-red, Influx w/ Grafana
+* [traefik](https://hub.docker.com/r/_/traefik/) - Traefik - controls access to sub domain hosting Home Assistant
+* [linuxserver/syncthing](https://hub.docker.com/r/linuxserver/syncthing/) - Syncthing - this is how I choose to modify configuration files remotely
+* [v2tec/watchtower](https://github.com/v2tec/watchtower) - Watchtower - this updates Home Assistant
+* **To-Do** node-red, Influx w/ Grafana
 
 
 ### System:

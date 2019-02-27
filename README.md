@@ -2,9 +2,7 @@
 
 ![Build Status](https://travis-ci.org/joe-scalise/HomeAssistantConfig.svg?branch=master) [![Build Status](https://dev.azure.com/joescalise/HomeAssistant/_apis/build/status/joe-scalise.HomeAssistantConfig?branchName=local-changes)](https://dev.azure.com/joescalise/HomeAssistant/_build/latest?definitionId=1?branchName=local-changes)
 
-This is a backup of my Home Assistant configuration.  I recently moved it all from a Raspberry Pi to Docker.  I have not had any stability issues since - I was constantly chasing some issue or another on the Raspberry Pi/HASS.IO which led me down this path.
-
-I use Docker Compose, and Traefik as a reverse proxy.  
+This is a backup of my Home Assistant configuration.  Started on Raspberry Pi with HASS.IO but it never worked.  Moved to Docker Compose on Ubuntu Server
 
 ### Highlights of the System Setup
 
@@ -17,7 +15,7 @@ I use Docker Compose, and Traefik as a reverse proxy.
 * Github takes care of configuration backup (not automatically)
 * Travis CI provides automatic builds/test for repository changes
 
-### Containers:
+### Containers (related to Home Assistant):
 
 * [homeassistant/home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) - Home Assistant
 * [traefik](https://hub.docker.com/r/_/traefik/) - Traefik
@@ -25,20 +23,17 @@ I use Docker Compose, and Traefik as a reverse proxy.
 * [linuxserver/syncthing](https://hub.docker.com/r/linuxserver/syncthing/) - Syncthing
 * [v2tec/watchtower](https://github.com/v2tec/watchtower) - Watchtower
 
-### System:
-- old HP laptop
-- Ubuntu 18.04.1 LTS
+* *TODO* node-red, Influx w/ Grafana
 
-Old System:
-- ~~Raspberry Pi 3 running HASS.IO~~
-- ~~Waveshare Official Raspberry Pi Power Supply~~
-- ~~SanDisk Ultra 64GB MicroSDXC Class 10 UHS Memory Card~~
+
+### System:
+Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) 2 nodes in Azure via site-to-site VPN.  Home Assistant does not run in Swarm due to the fact that I cannot map in the Z-Wave USB device.
 
 ### Devices:
 
 | Qty   | Name                                                  | Link |
 | ----- | ----------------------------------------------------- | ---- |
-| 6 | GE Z-Wave Wireless Switches (12722, 12723, 14291, 14294) | [(Amazon)](https://amzn.to/2C6WGNI) |
+| 10 | GE Z-Wave Wireless Switches (12722, 12723, 14291, 14294) | [(Amazon)](https://amzn.to/2C6WGNI) |
 | 1 | GE Z-Wave Plus Smart Lighting & Appliance Control Outdoor Module | [(Amazon)](https://amzn.to/2QNSkDs) |
 | 1 | Aeotec Z-Stick Gen5 Z-Wave Plus USB | [(Amazon)](https://amzn.to/2UD2vd7) |
 | 1 | Ubiquiti Unifi Security Gateway (USG) | [(Amazon)](https://amzn.to/2ry1HJp) |

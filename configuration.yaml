@@ -54,24 +54,14 @@ lovelace:
   mode: yaml
 
 media_player:
-  - platform: plex
-
-  - platform: firetv
-    name: Living Room Fire TV
-    host: 10.0.0.16
-    adbkey: "/config/adbkey"
-
-  # - platform: firetv
-  #    name: Master Bedroom Fire TV
-  #    host: 10.0.0.13
-  #    adbkey: "/adbkey13"
 
 map:
 
 notify: !include includes/notify.yaml
 
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 recorder:
   purge_keep_days: 5
@@ -86,9 +76,9 @@ sensor: !include_dir_list sensors
 
 shell_command: !include includes/shell_commands.yaml
 
-shopping_list:
-
 sun:
+
+system_health:
 
 telegram_bot:
   - platform: polling
@@ -107,3 +97,4 @@ zone: !include includes/zones.yaml
 
 zwave:
   usb_path: /dev/ttyACM0
+  

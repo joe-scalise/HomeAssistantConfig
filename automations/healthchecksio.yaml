@@ -4,6 +4,5 @@
   condition: []
   id: '1519742778289'
   trigger:
-  - minutes: /15
-    seconds: 0
-    platform: time
+    platform: time_pattern
+    minutes: '/15'

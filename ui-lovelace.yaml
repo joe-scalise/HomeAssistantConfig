@@ -66,7 +66,6 @@ views:
         title: Living Room
         show_header_toggle: false
         entities:
-          - entity: media_player.living_room_fire_tv
           - entity: switch.ge_12722_onoff_relay_switch_4
           - entity: sensor.living_room_temperature
             name: Temperature
@@ -119,7 +118,7 @@ views:
       
       - type: entities
         title: Outdoor Lights
-        show_header_toggle: true
+        show_header_toggle: false
         entities:
           - entity: switch.ge_14284_outdoor_smart_switch_switch
             name: Christmas Lights
@@ -132,8 +131,8 @@ views:
         title: Drive Times
         show_header_toggle: false
         entities:
-          - sensor.joes_home_travel_time
-          - sensor.joes_morning_commute
+          - sensor.joe_s_home_travel_time
+          - sensor.joe_s_morning_commute
      
   # - title: History
   #   id: history   
@@ -155,6 +154,7 @@ views:
     cards:
       - type: entities
         title: Sun
+        show_header_toggle: false
         entities:
           - sun.sun
           - sensor.moon
@@ -164,39 +164,20 @@ views:
         entities:
           - automation.a_is_away_from_home_telegram_notification
           - automation.a_is_home_telegram_notification
-          - automation.ensure_first_floor_lights_are_off_at_1115_pm
-          - automation.hassio_heartbeat_to_healthchecksio
+          - automation.ensure_first_floor_lights_are_off_at_11_15_pm
+          - automation.hass_io_heartbeat_to_healthchecks_io
           - automation.turn_off_christmas_lights
           - automation.turn_on_christmas_lights
-          
-      - type: picture-entity
-        name: Back Patio
-        entity: camera.onvif_camera
-
-  - title: System
-    id: system
+       
+  - title: Dashboard
+    id: dashboard
     cards:
+
       - type: entities
         title: Home Assistant
+        show_header_toggle: false
         entities:
           - sensor.home_assistant_uptime
-
-      - type: entities
-        title: Home Network
-        entities:
-          - sensor.ssl_certificate_expiry
-          - sensor.fastcom_download
-
-      - type: entities
-        title: !secret domain_name
-        #title: Whois
-        entities:
-          - sensor.whois
-
-      - type: history-graph
-        title: Download Speed History
-        entities:
-          - sensor.fastcom_download
 
       # - type: entities
       #   title: Indoor Lighting
@@ -210,21 +191,25 @@ views:
 
       - type: entities
         title: Scripts
+        show_header_toggle: false
         entities: 
           - group.all_scripts
 
       - type: entities
         title: Tests
+        show_header_toggle: false
         entities:
           - script.test_telegram
 
       - type: entities
         title: Switches
+        show_header_toggle: false
         entities: 
           - group.all_switches
     
       - type: entities
         title: Z-Wave
+        show_header_toggle: false
         entities:
           - zwave.aeotec_zw090_zstick_gen5_us
           - zwave.ge_14291_onoff_relay_switch_2
@@ -233,11 +218,9 @@ views:
           - zwave.ge_12722_onoff_relay_switch_5
           - zwave.ge_14284_outdoor_smart_switch
 
-  - title: Dashboard
-    id: dashboard
-    cards:
       - type: entities
         title: Security Breaches
+        show_header_toggle: false
         entities:
           - !secret email_entity
           - !secret email2_entity
@@ -248,15 +231,15 @@ views:
       - type: history-graph
         title: Pi-hole
         entities:
-          - sensor.pihole_ads_blocked_today
-          - sensor.pihole_ads_percentage_blocked_today
-          - sensor.pihole_dns_queries_cached
-          - sensor.pihole_dns_queries_forwarded
-          - sensor.pihole_dns_queries_today
-          - sensor.pihole_dns_unique_clients
-          - sensor.pihole_dns_unique_domains
-          - sensor.pihole_domains_blocked
-          - sensor.pihole_seen_clients
+          - sensor.pi_hole_ads_blocked_today
+          - sensor.pi_hole_ads_percentage_blocked_today
+          - sensor.pi_hole_dns_queries_cached
+          - sensor.pi_hole_dns_queries_forwarded
+          - sensor.pi_hole_dns_queries_today
+          - sensor.pi_hole_dns_unique_clients
+          - sensor.pi_hole_dns_unique_domains
+          - sensor.pi_hole_domains_blocked
+          - sensor.pi_hole_seen_clients
 
       - type: history-graph
         title: Zestimate History
@@ -265,6 +248,7 @@ views:
 
       - type: entities
         title: Crypto
+        show_header_toggle: false
         entities:
           - sensor.coinbase_btc_wallet
           - sensor.coinbase_eth_wallet
@@ -277,5 +261,8 @@ views:
 
       - type: entities
         title: Discogs
+        show_header_toggle: false
         entities:
-          - sensor.discogs
+          - sensor.discogs_collection
+          - sensor.discogs_random_record
+          - sensor.discogs_wantlist

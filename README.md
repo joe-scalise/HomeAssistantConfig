@@ -43,7 +43,7 @@ Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) 2 nodes in Azure via
 | 3 | Ethernet Adapter for Amazon Fire TV Devices |  |
 | 2 | Haiku Home Lights | [(Haiku Home)](https://www.haikuhome.com/) |
 | 2 | Haiku Home L Series 52" Smart Ceiling Fan w/ Wi-Fi |  |
-| 1 | ecobee3 Wi-Fi Thermostat  | [(Amazon)](https://amzn.to/2EerzBv) |
+| 1 | ecobee3 Wi-Fi Thermostat  |  |
 | 6 | ecobee Room Sensors (temperature, motion) |  |
 | 2 | Dahua IPC-HFW4300S V2 IP Security Cameras |  |
 | 1 | Ubiquiti UniFi Video G3 Flex Indoor/Outdoor PoE Camera (UVC-G3-FLEX) |  |
@@ -52,4 +52,3 @@ Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) 2 nodes in Azure via
 ### To-Do
 * https://automatic.com/pro/
 * https://opengarage.io/
-* https://eightsleep.com/

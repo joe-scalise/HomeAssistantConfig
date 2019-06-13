@@ -31,23 +31,23 @@ Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) 2 nodes in Azure via
 
 | Qty   | Name                                                  | Link |
 | ----- | ----------------------------------------------------- | ---- |
-| 10 | GE Z-Wave Wireless Switches (12722, 12723, 14291, 14294) | [(Amazon)](https://amzn.to/2C6WGNI) |
-| 1 | GE Z-Wave Plus Smart Lighting & Appliance Control Outdoor Module | [(Amazon)](https://amzn.to/2QNSkDs) |
-| 1 | Aeotec Z-Stick Gen5 Z-Wave Plus USB | [(Amazon)](https://amzn.to/2UD2vd7) |
-| 1 | Ubiquiti Unifi Security Gateway (USG) | [(Amazon)](https://amzn.to/2ry1HJp) |
-| 1 | Ubiquiti UniFi Switch 8 60W (US-8-60W) | [(Amazon)](https://amzn.to/2C8KNqL) |
-| 2 | Ubiquiti Unifi 802.11ac Dual-Radio PRO Access Point (UAP-AC-PRO-US)| [(Amazon)](https://amzn.to/2C70HBQ) |
-| 1 | Ubiquiti Unifi Cloud Key - Remote Control Device (UC-CK)| [(Amazon)](https://amzn.to/2SJkIUu) |
-| 1 | Synology 2 bay NAS DiskStation DS218j | [(Amazon)](https://amzn.to/2UDEiDG) |
-| 3 | Amazon Fire TV w/ Ethernet Adapters  | [(Amazon)](https://amzn.to/2QR7yaM) |
-| 3 | Ethernet Adapter for Amazon Fire TV Devices | [(Amazon)](https://amzn.to/2PzMeSm) |
+| 10 | GE Z-Wave Wireless Switches (12722, 12723, 14291, 14294) |  |
+| 1 | GE Z-Wave Plus Smart Lighting & Appliance Control Outdoor Module |  |
+| 1 | Aeotec Z-Stick Gen5 Z-Wave Plus USB |  |
+| 1 | Ubiquiti Unifi Security Gateway (USG) |  |
+| 1 | Ubiquiti UniFi Switch 8 60W (US-8-60W) |  |
+| 2 | Ubiquiti Unifi 802.11ac Dual-Radio PRO Access Point (UAP-AC-PRO-US)|  |
+| 1 | Ubiquiti Unifi Cloud Key - Remote Control Device (UC-CK)|  |
+| 1 | Synology 2 bay NAS DiskStation DS218j |  |
+| 3 | Amazon Fire TV w/ Ethernet Adapters  |  |
+| 3 | Ethernet Adapter for Amazon Fire TV Devices |  |
 | 2 | Haiku Home Lights | [(Haiku Home)](https://www.haikuhome.com/) |
-| 2 | Haiku Home L Series 52" Smart Ceiling Fan w/ Wi-Fi | [(Amazon)](https://amzn.to/2EstSSb) |
+| 2 | Haiku Home L Series 52" Smart Ceiling Fan w/ Wi-Fi |  |
 | 1 | ecobee3 Wi-Fi Thermostat  | [(Amazon)](https://amzn.to/2EerzBv) |
-| 6 | ecobee Room Sensors (temperature, motion) | [(Amazon)](https://amzn.to/2Ei1eCI) |
-| 2 | Dahua IPC-HFW4300S V2 IP Security Cameras | [(Amazon)](https://amzn.to/2UELI9J) |
-| 1 | Ubiquiti UniFi Video G3 Flex Indoor/Outdoor PoE Camera (UVC-G3-FLEX) | [(Amazon)](https://amzn.to/2LfgYaK) |
-| 5 | Ubiquiti UniFi Video Camera G3 (UVC-G3-AF) | [(Amazon)](https://amzn.to/2SIgvjZ) |
+| 6 | ecobee Room Sensors (temperature, motion) |  |
+| 2 | Dahua IPC-HFW4300S V2 IP Security Cameras |  |
+| 1 | Ubiquiti UniFi Video G3 Flex Indoor/Outdoor PoE Camera (UVC-G3-FLEX) |  |
+| 5 | Ubiquiti UniFi Video Camera G3 (UVC-G3-AF) |  |
 
 ### To-Do
 * https://automatic.com/pro/

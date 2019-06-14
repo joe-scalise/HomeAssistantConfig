@@ -1,3 +1,0 @@
-platform: onvif
-host: !secret onvif_host
-port: 80

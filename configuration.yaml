@@ -35,6 +35,7 @@ ecobee:
   api_key: !secret ecobee_api_key
 
 frontend:
+  themes: !include themes.yaml
 
 group: !include includes/groups.yaml
 
@@ -72,6 +73,9 @@ recorder:
 
 script: !include includes/scripts.yaml
 
+senseme:
+  max_number_fans: 2
+
 sensor: !include_dir_list sensors
 
 shell_command: !include includes/shell_commands.yaml
@@ -92,6 +96,10 @@ telegram_bot:
 
 updater:
   reporting: False
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
 
 zone: !include includes/zones.yaml
 

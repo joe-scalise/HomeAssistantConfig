@@ -1,9 +1,0 @@
-platform: darksky
-api_key: !secret darksky_api_key
-update_interval: 
-  minutes: 3
-forecast:
-monitored_conditions:
-  - summary
-  - temperature
-  - hourly_summary

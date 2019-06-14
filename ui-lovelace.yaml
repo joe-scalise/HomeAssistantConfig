@@ -1,66 +1,9 @@
 title: !secret home_title
-
 views:
   - icon: mdi:home-assistant
     title: Home
     id: home
     cards:
-
-      - type: entities
-        title: Joe's Phone
-        show_header_toggle: false
-        entities:
-          - entity: device_tracker.joe
-            name: Joe
-          - entity: sensor.android_activity_sensor
-            name: Activity Sensor
-          - entity: sensor.android_battery_sensor
-            name: Battery
-          #- device_tracker.64bc0c45ea9b
-
-      - type: map
-        #aspect_ratio: 60%
-        entities:
-          - device_tracker.joe
-          - zone.home
-          - zone.work
-          - zone.rec_center
-          - zone.school
-
-      - type: weather-forecast
-        entity: weather.my_ecobee
-
-      - type: entities
-        title: Thermostat
-        show_header_toggle: false
-        entities:
-          - entity: climate.my_ecobee
-            name: Thermostat
-          - entity: sensor.my_ecobee_temperature
-            name: Temperature
-          - entity: sensor.my_ecobee_humidity
-            name: Humidity
-          - entity: binary_sensor.my_ecobee_occupancy
-            name: Motion
-      
-      - type: thermostat
-        entity: climate.my_ecobee
-
-      - type: history-graph
-        title: Indoor Temperature History
-        entities:
-          - entity: sensor.master_bedroom_temperature
-            name: Master Bedroom
-          - entity: sensor.playroom_temperature
-            name: Playroom
-          - entity: sensor.living_room_temperature
-            name: Living Room
-          - entity: !secret bedroom2_temperature
-            name: !secret bedroom2_name
-          - entity: !secret bedroom3_temperature
-            name: !secret bedroom3_name
-          - entity: sensor.my_ecobee_temperature
-            name: ecobee
 
       - type: entities
         title: Living Room
@@ -70,6 +13,13 @@ views:
           - entity: sensor.living_room_temperature
             name: Temperature
           - entity: binary_sensor.living_room_occupancy
+            name: Motion
+
+      - type: entities
+        title: Foyer
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.my_ecobee_occupancy
             name: Motion
 
       - type: entities
@@ -128,26 +78,84 @@ views:
         image: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 
       - type: entities
-        title: Drive Times
+        title: Automations
+        entities:
+          - automation.a_is_away_from_home_telegram_notification
+          - automation.a_is_home_telegram_notification
+          - automation.ensure_first_floor_lights_are_off_at_11_15_pm
+          - automation.hass_io_heartbeat_to_healthchecks_io
+          - automation.turn_off_christmas_lights
+          - automation.turn_on_christmas_lights
+
+  - title: Climate
+    id: climate
+    cards:
+
+      - type: weather-forecast
+        entity: weather.dark_sky
+
+      - type: entities
+        title: Thermostat
         show_header_toggle: false
         entities:
-          - sensor.joe_s_home_travel_time
-          - sensor.joe_s_morning_commute
-     
-  # - title: History
-  #   id: history   
-  #   cards:
-  #     - type: history-graph
-  #       title: Drive Times History
-  #       entities:
-  #         - sensor.joes_home_travel_time
-  #         - sensor.joes_morning_commute
+          - entity: climate.my_ecobee
+            name: Thermostat
+          - entity: sensor.my_ecobee_temperature
+            name: Temperature
+          - entity: sensor.my_ecobee_humidity
+            name: Humidity
+          - entity: binary_sensor.my_ecobee_occupancy
+            name: Motion
+      
+      - type: thermostat
+        entity: climate.my_ecobee
 
-  #     - type: history-graph
-  #       title: Presence History
-  #       entities:
-  #         - device_tracker.joe
-  #         - device_tracker.64bc0c45ea9b
+      - type: history-graph
+        title: Indoor Temperature History
+        entities:
+          - entity: sensor.master_bedroom_temperature
+            name: Master Bedroom
+          - entity: sensor.playroom_temperature
+            name: Playroom
+          - entity: sensor.living_room_temperature
+            name: Living Room
+          - entity: !secret bedroom2_temperature
+            name: !secret bedroom2_name
+          - entity: !secret bedroom3_temperature
+            name: !secret bedroom3_name
+          - entity: sensor.my_ecobee_temperature
+            name: ecobee
+
+  - title: Presence
+    id: presence
+    cards:
+
+      - type: entities
+        title: Joe's Phone
+        show_header_toggle: false
+        entities:
+          - entity: device_tracker.joe
+            name: Joe
+          - entity: sensor.android_activity_sensor
+            name: Activity Sensor
+          - entity: sensor.android_battery_sensor
+            name: Battery
+
+      - type: map
+        #aspect_ratio: 60%
+        entities:
+          - device_tracker.joe
+          - zone.home
+          - zone.work
+          - zone.rec_center
+          - zone.school
+
+      - type: entities
+        title: Drive Times
+        shoe_header_toggle: false
+        entities:
+          - sensor.joe_s_home_travel_time
+          - sensor.joe_s_morning_commute    
           
   - title: Security
     id: security
@@ -158,16 +166,6 @@ views:
         entities:
           - sun.sun
           - sensor.moon
-
-      - type: entities
-        title: Automations
-        entities:
-          - automation.a_is_away_from_home_telegram_notification
-          - automation.a_is_home_telegram_notification
-          - automation.ensure_first_floor_lights_are_off_at_11_15_pm
-          - automation.hass_io_heartbeat_to_healthchecks_io
-          - automation.turn_off_christmas_lights
-          - automation.turn_on_christmas_lights
        
   - title: Dashboard
     id: dashboard

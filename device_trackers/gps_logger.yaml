@@ -1,2 +1,0 @@
-platform: gpslogger
-password: !secret gpslogger_password

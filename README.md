@@ -48,7 +48,3 @@ Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) 2 nodes in Azure via
 | 2 | Dahua IPC-HFW4300S V2 IP Security Cameras |  |
 | 1 | Ubiquiti UniFi Video G3 Flex Indoor/Outdoor PoE Camera (UVC-G3-FLEX) |  |
 | 5 | Ubiquiti UniFi Video Camera G3 (UVC-G3-AF) |  |
-
-### To-Do
-* https://automatic.com/pro/
-* https://opengarage.io/

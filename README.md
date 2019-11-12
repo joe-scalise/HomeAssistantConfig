@@ -9,12 +9,12 @@ This is a backup of my Home Assistant configuration.
 ### System Highlights and Containers Used
 
 * [homeassistant/home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) - Home Assistant
-* [Traefik](https://hub.docker.com/r/_/traefik/) - Traefik - sub domain access and certificates
+* [Traefik](https://hub.docker.com/r/_/traefik/) - reverse proxy and certificates
 * UniFi Security Gateway takes care of updating DNS dynamically
 * [Ouroborus](https://hub.docker.com/r/pyouroboros/ouroboros) takes care of updating images
 * [healthchecks.io](https://healthchecks.io/) takes care of service pings and emails me when something is down
 * [Gotify](https://hub.docker.com/r/gotify/server) for mobile notifications via healthchecks.io.
-* [linuxserver/syncthing](https://hub.docker.com/r/linuxserver/syncthing/) - Syncthing - this is how I choose to modify configuration files remotely
+* [Syncthing](https://hub.docker.com/r/linuxserver/syncthing/) - this is how I choose to modify configuration files remotely
 * GitHub for configuration backups, [this script] is used to backup the host
 * Travis CI/Azure DevOps provides automatic builds/test for repository changes
 
@@ -24,7 +24,7 @@ This is a backup of my Home Assistant configuration.
 * Home Assistant Integrations can be fun and addictive at first, but, will ultimately be a constant source of failures and issues.  Stick with the basics.  Lights, presense, smart-home devices like thermostats...
 
 ### System:
-Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) 2 nodes in Azure via site-to-site VPN.  Home Assistant does not run in Swarm due to the fact that I cannot map in the Z-Wave USB device.
+Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) ~~2 nodes in Azure via site-to-site VPN~~ (too costly, one node swarm for now).  Home Assistant does not run in Swarm due to the fact that you cannot map in the Z-Wave USB device.
 
 ### Devices:
 

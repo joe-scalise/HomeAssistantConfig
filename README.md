@@ -23,10 +23,11 @@ This is a backup of my Home Assistant configuration.
 * Run Home Assistant in Docker and skip all the other ways of installing/hosting, save yourself headaches.
 * Home Assistant Integrations can be fun and addictive at first, but, will ultimately be a constant source of failures and issues.  Stick with the basics.  Lights, presense, smart-home devices like thermostats...
 
-### System:
+### System
+
 Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) ~~2 nodes in Azure via site-to-site VPN~~ (too costly, one node swarm for now).  Home Assistant does not run in Swarm due to the fact that you cannot map in the Z-Wave USB device.
 
-### Devices:
+### Devices
 
 | Qty   | Name                                                  | Link |
 | ----- | ----------------------------------------------------- | ---- |

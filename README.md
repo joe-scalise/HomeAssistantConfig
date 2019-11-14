@@ -18,9 +18,9 @@ This is a backup of my Home Assistant configuration.
 * GitHub for configuration backups, [this script] is used to backup the host
 * Travis CI/Azure DevOps provides automatic builds/test for repository changes
 
-### My Tips
+### Tips
 
-* Run Home Assistant in Docker and skip all the other ways of installing/hosting, save yourself headaches.
+* Run Home Assistant in Docker and skip all the other ways of installing/hosting - save yourself headaches!
 * Home Assistant Integrations can be fun and addictive at first, but, will ultimately be a constant source of failures and issues.  Stick with the basics.  Lights, presense, smart-home devices like thermostats...
 
 ### System
@@ -35,7 +35,7 @@ Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) ~~2 nodes in Azure v
 | 1 | GE Z-Wave Plus Smart Lighting & Appliance Control Outdoor Module | [Amazon](https://amzn.to/32Nk1yf) |
 | 1 | Aeotec Z-Stick Gen5 Z-Wave Plus USB | [Amazon](https://amzn.to/32NZ5qS) |
 | 1 | Ubiquiti Unifi Security Gateway (USG) | [Amazon](https://amzn.to/2CM7HUd) |
-| 1 | Ubiquiti UniFi Switch 8 60W (US-8-60W) | [Amazon](*https://amzn.to/374BpSp) |
+| 1 | Ubiquiti UniFi Switch 8 60W (US-8-60W) | [Amazon](https://amzn.to/374BpSp) |
 | 2 | Ubiquiti Unifi 802.11ac Dual-Radio PRO Access Point (UAP-AC-PRO-US)| [Amazon](https://amzn.to/2KkbsnZ) |
 | 1 | Ubiquiti Unifi Cloud Key - Remote Control Device (UC-CK)| [Amazon](https://amzn.to/2CIQBqz) |
 | 1 | Synology 2 bay NAS DiskStation DS218j | [Amazon](https://amzn.to/2KhXxiv) |

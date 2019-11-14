@@ -40,7 +40,7 @@ Ubuntu Server, Docker Swarm, 1 on-prem node (old HP laptop) ~~2 nodes in Azure v
 | 1 | Ubiquiti Unifi Cloud Key - Remote Control Device (UC-CK)|  |
 | 1 | Synology 2 bay NAS DiskStation DS218j |  |
 | 3 | Amazon Fire TV  |  |
-| 3 | Ethernet Adapter for Amazon Fire TV Devices |  |
+| 3 | Ethernet Adapter for Amazon Fire TV Devices | [Amazon](https://amzn.to/2pitaB5) |
 | 1 | Roku Ultra  |  |
 | 2 | Haiku Home Lights | [(Haiku Home)](https://www.haikuhome.com/) |
 | 2 | Haiku Home L Series 52" Smart Ceiling Fan w/ Wi-Fi |  |

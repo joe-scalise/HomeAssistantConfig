@@ -1,6 +1,0 @@
-  test_telegram:
-    alias: Test Telegram Notifications
-    sequence:
-      - service: notify.telegram
-        data:
-          message: 'This is a test!'

@@ -1,7 +1,0 @@
-platform: haveibeenpwned
-email: 
-  - !secret email
-  - !secret email2
-  - !secret email3
-  - !secret email4
-  - !secret email5

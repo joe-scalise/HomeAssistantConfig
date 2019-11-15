@@ -19,6 +19,8 @@ views:
         title: Foyer
         show_header_toggle: false
         entities:
+          - entity: sensor.my_ecobee_temperature
+            name: Temperature
           - entity: binary_sensor.my_ecobee_occupancy
             name: Motion
 
@@ -36,6 +38,15 @@ views:
           - entity: sensor.playroom_temperature
             name: Temperature
           - entity: binary_sensor.playroom_occupancy
+            name: Motion
+
+      - type: entities
+        title: Basement
+        show_header_toggle: false
+        entities:
+          - entity: sensor.basement_temperature
+            name: Temperature
+          - entity: binary_sensor.basement_occupancy
             name: Motion
 
       - type: entities
@@ -65,6 +76,15 @@ views:
             name: Temperature
           - entity: !secret bedroom3_occupancy
             name: Motion
+
+      - type: entities
+        title: !secret bedroom4_name
+        show_header_toggle: false
+        entities:
+          - entity: !secret bedroom4_temperature
+            name: Temperature
+          - entity: !secret bedroom4_occupancy
+            name: Motion
       
       - type: entities
         title: Outdoor Lights
@@ -80,8 +100,8 @@ views:
       - type: entities
         title: Automations
         entities:
-          - automation.a_is_away_from_home_telegram_notification
-          - automation.a_is_home_telegram_notification
+          #- automation.a_is_away_from_home_telegram_notification
+          #- automation.a_is_home_telegram_notification
           - automation.ensure_first_floor_lights_are_off_at_11_15_pm
           - automation.hass_io_heartbeat_to_healthchecks_io
           - automation.turn_off_christmas_lights
@@ -160,6 +180,7 @@ views:
   - title: Security
     id: security
     cards:
+    
       - type: entities
         title: Sun
         show_header_toggle: false
@@ -167,100 +188,13 @@ views:
           - sun.sun
           - sensor.moon
        
-  - title: Dashboard
-    id: dashboard
-    cards:
-
       - type: entities
         title: Home Assistant
         show_header_toggle: false
         entities:
           - sensor.home_assistant_uptime
 
-      # - type: entities
-      #   title: Indoor Lighting
-      #   entities:
-      #     - 
-
-      - type: entities
-        title: Automations
-        entities: 
-          - group.all_automations
-
-      - type: entities
-        title: Scripts
-        show_header_toggle: false
-        entities: 
-          - group.all_scripts
-
-      - type: entities
-        title: Tests
-        show_header_toggle: false
-        entities:
-          - script.test_telegram
-
-      - type: entities
-        title: Switches
-        show_header_toggle: false
-        entities: 
-          - group.all_switches
-    
-      - type: entities
-        title: Z-Wave
-        show_header_toggle: false
-        entities:
-          - zwave.aeotec_zw090_zstick_gen5_us
-          - zwave.ge_14291_onoff_relay_switch_2
-          - zwave.ge_12722_onoff_relay_switch_3
-          - zwave.ge_12722_onoff_relay_switch_4
-          - zwave.ge_12722_onoff_relay_switch_5
-          - zwave.ge_14284_outdoor_smart_switch
-
-      - type: entities
-        title: Security Breaches
-        show_header_toggle: false
-        entities:
-          - !secret email_entity
-          - !secret email2_entity
-          - !secret email3_entity
-          - !secret email4_entity
-          - !secret email5_entity
-
       - type: history-graph
         title: Pi-hole
         entities:
           - sensor.pi_hole_ads_blocked_today
-          - sensor.pi_hole_ads_percentage_blocked_today
-          - sensor.pi_hole_dns_queries_cached
-          - sensor.pi_hole_dns_queries_forwarded
-          - sensor.pi_hole_dns_queries_today
-          - sensor.pi_hole_dns_unique_clients
-          - sensor.pi_hole_dns_unique_domains
-          - sensor.pi_hole_domains_blocked
-          - sensor.pi_hole_seen_clients
-
-      - type: history-graph
-        title: Zestimate History
-        entities:
-          - sensor.zestimate
-
-      - type: entities
-        title: Crypto
-        show_header_toggle: false
-        entities:
-          - sensor.coinbase_btc_wallet
-          - sensor.coinbase_eth_wallet
-          - sensor.coinbase_usd_wallet
-
-      - type: history-graph
-        title: Bitcoin
-        entities:
-          - sensor.btc_exchange_rate
-
-      - type: entities
-        title: Discogs
-        show_header_toggle: false
-        entities:
-          - sensor.discogs_collection
-          - sensor.discogs_random_record
-          - sensor.discogs_wantlist

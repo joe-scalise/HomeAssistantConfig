@@ -1,0 +1,20 @@
+- id: '1568564465578'
+  alias: All Lights Off 10:00 PM
+  trigger:
+  - at: '22:00'
+    platform: time
+  condition: []
+  action:
+  - alias: ''
+    data:
+      entity_id: zwave.ge_12722_onoff_relay_switch_4
+    service: homeassistant.turn_off
+  - data:
+      entity_id: zwave.ge_12722_onoff_relay_switch_3
+    service: homeassistant.turn_off
+  - data:
+      entity_id: zwave.ge_12722_onoff_relay_switch_5
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.ge_14284_outdoor_smart_switch_switch
+    service: homeassistant.turn_on

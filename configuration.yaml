@@ -6,28 +6,21 @@ homeassistant:
   unit_system: imperial
   temperature_unit: F
   time_zone: America/New_York
-  customize: !include includes/customize.yaml
 
 http:
-  api_password: !secret http_password
+#  api_password: !secret http_password
   base_url: !secret base_url
   ip_ban_enabled: true
   login_attempts_threshold: 5
 
-automation: !include_dir_merge_list automations
+automation: !include automations.yaml
+automation old: !include_dir_merge_list automations
 
-camera: !include_dir_list cameras
-
-coinbase:
-  api_key: !secret coinbase_api_key
-  api_secret: !secret coinbase_secret 
-  exchange_rate_currencies:
-    - BTC
-    - ETH
+#camera: !include_dir_list cameras
 
 config:
 
-device_tracker: !include_dir_list device_trackers
+#device_tracker: !include_dir_list device_trackers
 
 discovery:
 
@@ -36,8 +29,6 @@ ecobee:
 
 frontend:
   themes: !include themes.yaml
-
-group: !include includes/groups.yaml
 
 history:
 
@@ -58,11 +49,13 @@ media_player:
 
 map:
 
-notify: !include includes/notify.yaml
-
 tts:
   - platform: google_translate
     service_name: google_say
+
+pi_hole:
+  host: !secret dns_host
+  verify_ssl: false
 
 recorder:
   purge_keep_days: 5
@@ -70,11 +63,16 @@ recorder:
     domains:
       - sensor
       - switch
-
-script: !include includes/scripts.yaml
+  exclude:
+    entities:
+      - sensor.android_activity_sensor
+      - sensor.android_battery_sensor
+      - sensor.home_assistant_uptime
+      - sensor.moon
+      - sensor.pi_hole_ads_blocked_today
+      - sensor.time
 
 senseme:
-  max_number_fans: 2
 
 sensor: !include_dir_list sensors
 
@@ -84,15 +82,17 @@ sun:
 
 system_health:
 
-telegram_bot:
-  - platform: polling
-    api_key: !secret telegram_api_key
-    allowed_chat_ids:
-      - !secret telegram_chat_id
-
 #usps:
 #  username: !secret usps_username
 #  password: !secret usps_password
+
+unifi:
+  controllers:
+    - host: unifi_host
+      site: Myrna
+#      ssid_filter:
+#        - 'HomeSSID'
+#        - 'IoTSSID'
 
 updater:
   reporting: False

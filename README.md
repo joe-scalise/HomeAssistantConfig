@@ -2,7 +2,8 @@
 
 # Home Assistant Configuration
 
-![Build Status](https://travis-ci.org/joe-scalise/HomeAssistantConfig.svg?branch=master) [![Build Status](https://img.shields.io/azure-devops/build/joescalise/af5372e7-8c15-4d17-8dbd-3effb1bf0fc2/1?style=for-the-badge)](https://dev.azure.com/joescalise/HomeAssistant)
+[![Build Status](https://img.shields.io/travis/joe-scalise/HomeAssistantConfig?style=for-the-badge)](https://travis-ci.org/joe-scalise/HomeAssistantConfig)
+[![Build Status](https://img.shields.io/azure-devops/build/joescalise/af5372e7-8c15-4d17-8dbd-3effb1bf0fc2/1?style=for-the-badge)](https://dev.azure.com/joescalise/HomeAssistant)
 
 This is a backup of my Home Assistant configuration.
 

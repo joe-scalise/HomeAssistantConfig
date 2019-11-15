@@ -1,6 +1,6 @@
-![Home Assistant Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/240px-Home_Assistant_Logo.svg.png)
-
 # Home Assistant Configuration
+
+![Home Assistant Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/240px-Home_Assistant_Logo.svg.png)
 
 [![Build Status](https://img.shields.io/travis/joe-scalise/HomeAssistantConfig?style=for-the-badge)](https://travis-ci.org/joe-scalise/HomeAssistantConfig)
 [![Build Status](https://img.shields.io/azure-devops/build/joescalise/af5372e7-8c15-4d17-8dbd-3effb1bf0fc2/1?style=for-the-badge)](https://dev.azure.com/joescalise/HomeAssistant)

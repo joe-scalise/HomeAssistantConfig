@@ -16,7 +16,8 @@ This is a backup of my Home Assistant configuration.
 * UniFi Security Gateway takes care of updating DNS dynamically
 * [Ouroborus](https://hub.docker.com/r/pyouroboros/ouroboros) takes care of updating images
 * [healthchecks.io](https://healthchecks.io/) takes care of service pings and emails me when something is down
-* [Gotify](https://hub.docker.com/r/gotify/server) for mobile notifications via healthchecks.io.
+* [uptimerobot.com](https://uptimerobot.com/) takes care of HTTP monitoring and emails/webhook when something is down
+* [Gotify](https://hub.docker.com/r/gotify/server) for mobile notifications via healthchecks.io/uptimerobot.com.
 * [Syncthing](https://hub.docker.com/r/linuxserver/syncthing/) - this is how I choose to modify configuration files remotely
 * GitHub for configuration backups, [this script] is used to backup the host
 * Travis CI/Azure DevOps provides automatic builds/test for repository changes

@@ -2,7 +2,7 @@
 
 # Home Assistant Configuration
 
-![Build Status](https://travis-ci.org/joe-scalise/HomeAssistantConfig.svg?branch=master) [![Build Status](https://dev.azure.com/joescalise/HomeAssistant/_apis/build/status/joe-scalise.HomeAssistantConfig?branchName=local-changes)](https://dev.azure.com/joescalise/HomeAssistant/_build/latest?definitionId=1?branchName=local-changes)
+![Build Status](https://travis-ci.org/joe-scalise/HomeAssistantConfig.svg?branch=master) [![Build Status](https://img.shields.io/azure-devops/build/joescalise/af5372e7-8c15-4d17-8dbd-3effb1bf0fc2/1?style=for-the-badge)](https://dev.azure.com/joescalise/HomeAssistant)
 
 This is a backup of my Home Assistant configuration.
 

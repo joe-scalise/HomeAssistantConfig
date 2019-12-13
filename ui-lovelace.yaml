@@ -194,7 +194,7 @@ views:
         entities:
           - sensor.home_assistant_uptime
 
-      - type: history-graph
+      - type: entities
         title: Pi-hole
         entities:
           - sensor.pi_hole_ads_blocked_today

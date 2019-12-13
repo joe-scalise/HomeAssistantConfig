@@ -17,4 +17,4 @@
     service: homeassistant.turn_off
   - data:
       entity_id: switch.ge_14284_outdoor_smart_switch_switch
-    service: homeassistant.turn_on
+    service: homeassistant.turn_off

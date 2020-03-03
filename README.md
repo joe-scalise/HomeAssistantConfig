@@ -1,11 +1,11 @@
-# Home Assistant Configuration
-
 ![Home Assistant Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/240px-Home_Assistant_Logo.svg.png)
 
 [![Build Status](https://img.shields.io/travis/joe-scalise/HomeAssistantConfig?style=for-the-badge)](https://travis-ci.org/joe-scalise/HomeAssistantConfig)
 [![Build Status](https://img.shields.io/azure-devops/build/joescalise/af5372e7-8c15-4d17-8dbd-3effb1bf0fc2/1?style=for-the-badge)](https://dev.azure.com/joescalise/HomeAssistant)
 ![Uptime](https://img.shields.io/uptimerobot/ratio/m783817500-86d7e2e320813e0c5bf41d79?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/joe-scalise/homeassistantconfig?style=for-the-badge)
+
+## Overview
 
 This is a backup of my Home Assistant configuration.
 

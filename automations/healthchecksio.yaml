@@ -1,8 +1,0 @@
-- action:
-  - service: shell_command.healthcheck
-  alias: HASS.IO Heartbeat to healthchecks.io
-  condition: []
-  id: '1519742778289'
-  trigger:
-    platform: time_pattern
-    minutes: '/15'

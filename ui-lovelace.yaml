@@ -10,6 +10,7 @@ views:
         show_header_toggle: false
         entities:
           - entity: switch.ge_12722_onoff_relay_switch_4
+            name: Lamps
           - entity: sensor.living_room_temperature
             name: Temperature
           - entity: binary_sensor.living_room_occupancy
@@ -28,13 +29,15 @@ views:
         title: Dining Room
         show_header_toggle: false
         entities:
-          - entity: switch.ge_12722_onoff_relay_switch_3
+          - entity: switch.jasco_products_12722_on_off_relay_switch_switch
+            name: Lights
       
       - type: entities
         title: Playroom
         show_header_toggle: false
         entities:
           - entity: switch.ge_12722_onoff_relay_switch_5
+            name: Lamps
           - entity: sensor.playroom_temperature
             name: Temperature
           - entity: binary_sensor.playroom_occupancy
@@ -63,6 +66,7 @@ views:
         show_header_toggle: false
         entities:
           - entity: switch.ge_14291_onoff_relay_switch_2
+            name: Light/Fan Switch
           - entity: !secret bedroom2_temperature
             name: Temperature
           - entity: !secret bedroom2_occupancy
@@ -88,24 +92,19 @@ views:
       
       - type: entities
         title: Outdoor Lights
-        show_header_toggle: false
         entities:
           - entity: switch.ge_14284_outdoor_smart_switch_switch
-            name: Christmas Lights
-
-      - type: picture-entity
-        entity: group.all_switches
-        image: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+            name: Outdoor Smart Switch
+          - entity: switch.jasco_products_14291_in_wall_smart_switch_switch_2
+            name: Front Porch Lights
 
       - type: entities
-        title: Automations
+        title: People
+        show_header_toggle: false
         entities:
-          #- automation.a_is_away_from_home_telegram_notification
-          #- automation.a_is_home_telegram_notification
-          - automation.ensure_first_floor_lights_are_off_at_11_15_pm
-          - automation.hass_io_heartbeat_to_healthchecks_io
-          - automation.turn_off_christmas_lights
-          - automation.turn_on_christmas_lights
+          - device_tracker.pixel_4_xl
+          - sensor.pixel_4_xl_geocoded_location
+          - sensor.pixel_4_xl_wifi_connection
 
   - title: Climate
     id: climate
@@ -196,5 +195,6 @@ views:
 
       - type: entities
         title: Pi-hole
+        show_header_toggle: false
         entities:
           - sensor.pi_hole_ads_blocked_today

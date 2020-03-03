@@ -18,7 +18,7 @@ automation old: !include_dir_merge_list automations
 
 #camera: !include_dir_list cameras
 
-config:
+default_config:
 
 #device_tracker: !include_dir_list device_trackers
 
@@ -32,10 +32,10 @@ frontend:
 
 history:
 
-google_assistant:
-  project_id: !secret google_assistant_project_id
-  api_key: !secret google_cloud_platform_api_key
-  #expose_by_default: false
+#google_assistant:
+#  project_id: !secret google_assistant_project_id
+#  api_key: !secret google_cloud_platform_api_key
+#  expose_by_default: false
 
 logbook:
 
@@ -73,10 +73,11 @@ recorder:
       - sensor.time
 
 senseme:
+  max_number_fans: 1
 
 sensor: !include_dir_list sensors
 
-shell_command: !include includes/shell_commands.yaml
+#shell_command: !include includes/shell_commands.yaml
 
 sun:
 

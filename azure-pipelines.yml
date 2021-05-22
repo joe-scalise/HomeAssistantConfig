@@ -1,26 +1,40 @@
+
+trigger: 
+  - main
+
+schedules:
+  -  cron: "0 12 * * 0"
+     displayName: Weekly Sunday build
+     branches:
+       include:
+       - main
+     always: true
+
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.6'
-      architecture: 'x64'
+jobs:
+  - job: 1
+    steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.6'
+          architecture: 'x64'
+          
+      - script: mv pipeline_secrets.yaml secrets.yaml
       
-  - script: mv pipeline_secrets.yaml secrets.yaml
-  
-  - script: touch "ssl.cert"
-  
-  - script: touch "ssl.key"
+      - script: touch "ssl.cert"
+      
+      - script: touch "ssl.key"
 
-  - script: mkdir "config"
-  
-  - script: touch "config/adbkey"
+      - script: mkdir "config"
+      
+      - script: touch "config/adbkey"
 
-  - script: python -m pip install --upgrade pip
-    
-  - script: |
-      pip install homeassistant
+      - script: python -m pip install --upgrade pip
+        
+      - script: |
+          pip install homeassistant
 
-  - script: |
-      hass -c . --script check_config
+      - script: |
+          hass -c . --script check_config

@@ -14,29 +14,29 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
-  -  stage: Check Config
-     jobs:
-       - job: CheckConfigJob
-         steps:
-           - task: UsePythonVersion@0
-             inputs:
-               versionSpec: '3.6'
-               architecture: 'x64'
-                
-           - script: mv pipeline_secrets.yaml secrets.yaml
+-  stage: Check Config
+   jobs:
+    - job: CheckConfigJob
+      steps:
+        - task: UsePythonVersion@0
+          inputs:
+            versionSpec: '3.6'
+            architecture: 'x64'
+            
+        - script: mv pipeline_secrets.yaml secrets.yaml
+      
+        - script: touch "ssl.cert"
+        
+        - script: touch "ssl.key"
+
+        - script: mkdir "config"
+        
+        - script: touch "config/adbkey"
+
+        - script: python -m pip install --upgrade pip
           
-           - script: touch "ssl.cert"
-            
-           - script: touch "ssl.key"
+        - script: |
+            pip install homeassistant
 
-           - script: mkdir "config"
-            
-           - script: touch "config/adbkey"
-
-           - script: python -m pip install --upgrade pip
-              
-           - script: |
-              pip install homeassistant
-
-           - script: |
-              hass -c . --script check_config
+        - script: |
+            hass -c . --script check_config

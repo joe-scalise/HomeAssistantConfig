@@ -10,8 +10,7 @@ schedules:
        - main
      always: true
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: Default
 
 stages:
 -  stage: CheckConfig

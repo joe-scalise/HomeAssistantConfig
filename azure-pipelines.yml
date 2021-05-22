@@ -14,7 +14,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
--  stage: Check Config
+-  stage: CheckConfig
    jobs:
     - job: CheckConfigJob
       steps:

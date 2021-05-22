@@ -1,6 +1,6 @@
 
 trigger: 
-  - main
+  - local-changes
 
 schedules:
   -  cron: "0 12 * * 0"

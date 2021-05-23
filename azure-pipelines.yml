@@ -19,8 +19,9 @@ stages:
       steps:
         - task: UsePythonVersion@0
           inputs:
-            versionSpec: '3.8'
+            versionSpec: '3.x'
             architecture: 'x64'
+            addToPath: true
             
         - script: mv pipeline_secrets.yaml secrets.yaml
       

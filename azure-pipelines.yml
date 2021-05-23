@@ -23,20 +23,23 @@ stages:
             addToPath: true
             architecture: 'x64'
                     
-        - script: mv pipeline_secrets.yaml secrets.yaml
+        #- script: copy pipeline_secrets.yaml secrets.yaml
+        - powershell: Copy-Item pipeline_secrets.yaml secrets.yaml
       
-        - script: touch "ssl.cert"
+        #- script: touch "ssl.cert"
+        - powershell: New-Item "ssl.cert"
         
-        - script: touch "ssl.key"
+        #- script: touch "ssl.key"
+        - powershell: New-Item "ssl.key"
 
-        - script: mkdir "config"
+        #- script: mkdir "config"
+        - powershell: New-Item "config" -Type Directory
         
-        - script: touch "config/adbkey"
+        #- script: touch "config/adbkey"
+        - powershell: New-Item "config/adbkey" -Type Directory
 
         - script: python -m pip install --upgrade pip
-          
-        - script: |
-            pip install homeassistant
 
-        - script: |
-            hass -c . --script check_config
+        - script: python -m pip install homeassistant
+
+        - script: python -m hass -c . --script check_config

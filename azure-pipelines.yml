@@ -19,10 +19,10 @@ stages:
       steps:
         - task: UsePythonVersion@0
           inputs:
-            #versionSpec: '3.x'
-            #architecture: 'x64'
+            versionSpec: '3.x'
             addToPath: true
-            
+            architecture: 'x64'
+                    
         - script: mv pipeline_secrets.yaml secrets.yaml
       
         - script: touch "ssl.cert"
